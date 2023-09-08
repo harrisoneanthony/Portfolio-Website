@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Navbar />
         <AnimatedRoutes />
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );

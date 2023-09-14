@@ -19,7 +19,7 @@ function Contact(){
     };
 
     return (
-        <motion.div
+        <div
             className="container"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
@@ -28,18 +28,19 @@ function Contact(){
                 backgroundAttachment: "fixed",
                 minHeight: "100vh", // Ensure the background covers the entire viewport
             }}
-            initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and a slight y-offset upwards
-            animate={{ opacity: 1, y: 0, transition: { duration: 1}  }} // Animate to full opacity and y-offset 0
-            exit={{ opacity: 0, y: 20, transition: { duration: 1}  }} // Exit animation, you can adjust this
-            >
+        >
             <motion.h1
                 className="fade-in-text"
-                initial={{ opacity: 0, y: -20 }} // Start with opacity 0 and a slight y-offset upwards
-                animate={{ opacity: 1, y: 0, transition: { duration: 1}  }} // Animate to full opacity and y-offset 0
+                initial={{ opacity: 0, y: -20 }} 
+                animate={{ opacity: 1, y: 0, transition: { duration: 1} }}
             >
                 Contact
             </motion.h1>
-            <div className="contactForm">
+            <motion.div 
+                className="contactForm"
+                initial={{ opacity: 0, y: -20 }} 
+                animate={{ opacity: 1, y: 0, transition: { duration: 1} }}
+                >
                 <div className="contactContent" >
                     <div className="formHeader">
                         Contact
@@ -54,8 +55,8 @@ function Contact(){
                         <button className="submitButton">Edit/Submit</button>
                     </form>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 };
 

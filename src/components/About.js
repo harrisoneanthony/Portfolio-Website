@@ -6,29 +6,26 @@ import backgroundImage from "../images/data-background.avif"
 
 const About = () => {
     return (
-        <motion.div
+        <div
             className="container"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundAttachment: "fixed",
-                minHeight: "100vh", // Ensure the background covers the entire viewport
+                minHeight: "100vh", 
             }}
-            initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and a slight y-offset upwards
-            animate={{ opacity: 1, y: 0, transition: { duration: 1}  }} // Animate to full opacity and y-offset 0
-            exit={{ opacity: 0, y: 20, transition: { duration: 1}  }} // Exit animation, you can adjust this
-            >
+        >
             <div>
                 <motion.h1
                     className="fade-in-text"
-                    initial={{ opacity: 0, y: -20 }} // Start with opacity 0 and a slight y-offset upwards
-                    animate={{ opacity: 1, y: 0, transition: { duration: 1}  }} // Animate to full opacity and y-offset 0
+                    initial={{ opacity: 0, y: -20 }} 
+                    animate={{ opacity: 1, y: 0, transition: { duration: 1} }} 
                 >
                     About
                 </motion.h1>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

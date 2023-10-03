@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../styles/NavbarStyles.css';
+import '../static/styles/NavbarStyles.css';
 import { Link, NavLink } from "react-router-dom"; // Import Link from react-router-dom
 
 class Navbar extends Component {

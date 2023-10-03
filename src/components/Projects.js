@@ -1,9 +1,9 @@
 import React from "react";
-import '../styles/PageStyles.css';
+import '../static/styles/PageStyles.css';
 import { motion } from "framer-motion";
-import backgroundImage from "../images/data-background.avif"
-
-
+import backgroundImage from "../static/images/data-background.avif";
+import ProjectCard from "./ProjectCard"; // Adjust the path to match the actual location of your ProjectCard component
+import projectsData from "./ProjectsData"; // Import the project data
 
 const Projects = () => {
     return (
@@ -21,11 +21,25 @@ const Projects = () => {
                 <motion.h1
                     className="fade-in-text"
                     initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0, transition: { duration: 1} }}
+                    animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                 >
                     Projects
                 </motion.h1>
             </div>
+
+            {/* Map over the projectsData array and render a ProjectCard for each project */}
+            <motion.div className="row">
+                {projectsData.map((project) => (
+                    <ProjectCard
+                        key={project.id}
+                        name={project.name}
+                        technologiesUsed={project.technologiesUsed}
+                        githubLink={project.githubLink}
+                        imagePaths={project.imagePaths}
+                        videoLink={project.videoLink}
+                    />
+                ))}
+            </motion.div>
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import '../styles/FooterStyles.css'
-import GmailIcon from '../images/email_icon.png';
-import GitHubIcon from '../images/github_icon.png';
-import LinkedInIcon from '../images/linkedin_icon.png';
+import '../static/styles/FooterStyles.css'
+import GmailIcon from '../static/images/email_icon.png';
+import GitHubIcon from '../static/images/github_icon.png';
+import LinkedInIcon from '../static/images/linkedin_icon.png';
 
 
 const Footer = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/PageStyles.css";
+import "../static/styles/PageStyles.css";
 import { motion } from "framer-motion";
-import backgroundImage from "../images/data-background.avif"
+import backgroundImage from "../static/images/data-background.avif"
 
 const Home = () => {
     return (

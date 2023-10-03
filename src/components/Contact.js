@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../styles/ContactStyles.css';
+import '../static/styles/ContactStyles.css';
 import { motion } from "framer-motion";
-import backgroundImage from "../images/data-background.avif"
+import backgroundImage from "../static/images/data-background.avif"
 
 
 function Contact(){
@@ -29,13 +29,6 @@ function Contact(){
                 minHeight: "100vh", // Ensure the background covers the entire viewport
             }}
         >
-            <motion.h1
-                className="fade-in-text"
-                initial={{ opacity: 0, y: -20 }} 
-                animate={{ opacity: 1, y: 0, transition: { duration: 1} }}
-            >
-                Contact
-            </motion.h1>
             <motion.div 
                 className="contactForm"
                 initial={{ opacity: 0, y: -20 }} 
@@ -45,7 +38,7 @@ function Contact(){
                     <div className="formHeader">
                         Contact
                     </div>
-                    <form >
+                    <form className="formBody">
                         <label htmlFor="name" className="sr-only">Name</label>
                         <input type="text" name="name" id="name" placeholder="name" onChange={handleChange} required/>
                         <label htmlFor="email" className="sr-only">Email</label>

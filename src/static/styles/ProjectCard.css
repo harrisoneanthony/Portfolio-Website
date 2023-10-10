@@ -1,0 +1,62 @@
+/* Video size */
+/* .video {
+    height: 500px;
+    width: 100%;
+} */
+
+/* Project Name */
+.projectName {
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+
+/* Onmouseover transition time
+div,
+img {
+    transition: 600ms;
+} */
+
+/* Code link */
+.cardLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.codeLink {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+}
+
+/* Video Link */
+#link {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+}
+
+.projectPictures {
+    height: 400px;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    border: 4px solid black;
+}
+
+/* Project Card */
+.projectCard {
+    margin-bottom: 25px;
+}
+
+/* Contact Text */
+.contactText {
+    margin-top: 15px;
+}
+
+/* Card Height */
+.card {
+    height: 420px;
+    /* border: 2px solid whitesmoke; */
+    border: 2px solid black;
+}

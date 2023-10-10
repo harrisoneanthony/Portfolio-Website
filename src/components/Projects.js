@@ -3,7 +3,7 @@ import '../static/styles/ProjectsStyles.css';
 import { motion } from "framer-motion";
 import backgroundImage from "../static/images/data-background.avif";
 import ProjectCard from "./ProjectCard"; // Adjust the path to match the actual location of your ProjectCard component
-import projectsData from "./ProjectsData"; // Import the project data
+import projectsData from "../ProjectsData"; // Import the project data
 // import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -19,33 +19,29 @@ const Projects = () => {
                 minHeight: "100vh", // Ensure the background covers the entire viewport
             }}
         >
-            <div>
-                <motion.h1
-                    className="fade-in-text"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-                >
-                    Projects
-                </motion.h1>
-            </div>
-
-            {/* Map over the projectsData array and render a ProjectCard for each project */}
-            <motion.div 
-                className="row"
+            <motion.body
+                className="fade-in-text"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             >
-                {projectsData.map((project) => (
-                    <ProjectCard
-                        key={project.id}
-                        name={project.name}
-                        technologiesUsed={project.technologiesUsed}
-                        githubLink={project.githubLink}
-                        imagePaths={project.imagePaths}
-                        videoLink={project.videoLink}
-                    />
-                ))}
-            </motion.div>
+                <div>
+                    <h1>Projects</h1>
+                </div>
+                <div className="projectGrid">
+                    <div className="gridItem">
+                        {projectsData.map((project) => (
+                            <ProjectCard
+                                key={project.id}
+                                name={project.name}
+                                technologiesUsed={project.technologiesUsed}
+                                githubLink={project.githubLink}
+                                imagePaths={project.imagePaths}
+                                videoLink={project.videoLink}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </motion.body>
         </div>
     );
 };

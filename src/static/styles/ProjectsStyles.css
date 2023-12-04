@@ -1,18 +1,10 @@
 .projectGrid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     padding: 10px;
 }
 
 
-.projectImage {
-    height: 200px;
-    max-width: 90%;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 1px solid whitesmoke;
-    /* border: 2px solid black; */
-}
 
 h1 {
     color: white;

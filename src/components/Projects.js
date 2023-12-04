@@ -10,7 +10,7 @@ import projectsData from "../ProjectsData"; // Import the project data
 const Projects = () => {
     return (
         <div
-            className="container"
+            className="projectGrid"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: "cover",
@@ -24,22 +24,17 @@ const Projects = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             >
-                <div>
-                    <h1>Projects</h1>
-                </div>
-                <div className="projectGrid">
-                    <div className="gridItem">
-                        {projectsData.map((project) => (
-                            <ProjectCard
-                                key={project.id}
-                                name={project.name}
-                                technologiesUsed={project.technologiesUsed}
-                                githubLink={project.githubLink}
-                                imagePaths={project.imagePaths}
-                                videoLink={project.videoLink}
-                            />
-                        ))}
-                    </div>
+                <div className="gridItem">
+                    {projectsData.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            name={project.name}
+                            technologiesUsed={project.technologiesUsed}
+                            githubLink={project.githubLink}
+                            imagePath={project.imagePath}
+                            videoLink={project.videoLink}
+                        />
+                    ))}
                 </div>
             </motion.body>
         </div>
